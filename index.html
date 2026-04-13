@@ -3,44 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlashSweep - Fast Cleaner & Shutdown</title>
+    <title>FlashSweep | Clean & Optimize your PC</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f0f0f; color: white; text-align: center; padding: 50px; }
-        .container { max-width: 800px; margin: auto; background: #1a1a1a; padding: 30px; border-radius: 15px; border: 1px solid #333; }
-        h1 { color: #00ff88; font-size: 3em; margin-bottom: 10px; }
-        p { color: #ccc; font-size: 1.2em; }
-        .btn { display: inline-block; padding: 15px 30px; margin: 20px; font-size: 1.1em; font-weight: bold; text-decoration: none; border-radius: 8px; transition: 0.3s; }
-        .btn-download { background-color: #00ff88; color: #000; }
-        .btn-download:hover { background-color: #00cc6e; transform: scale(1.05); }
-        .btn-pro { background-color: #555; color: #fff; border: 2px solid #00ff88; }
-        .btn-pro:hover { background-color: #00ff88; color: #000; }
-        .features { text-align: left; display: inline-block; margin-top: 30px; }
-        .features li { margin: 10px 0; color: #00ff88; }
+        /* Minimalist Style */
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #ffffff; color: #333; margin: 0; padding: 0; }
+        
+        /* Header */
+        header { padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+        .logo { font-size: 24px; font-weight: bold; color: #0066ff; }
+        
+        /* Hero Section */
+        .hero { padding: 80px 10%; text-align: center; background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%); }
+        h1 { font-size: 48px; color: #111; margin-bottom: 20px; }
+        p { font-size: 20px; color: #666; max-width: 600px; margin: 0 auto 30px; }
+
+        /* Buttons */
+        .cta-container { display: flex; justify-content: center; gap: 20px; }
+        .btn { padding: 15px 35px; font-size: 18px; font-weight: 600; text-decoration: none; border-radius: 50px; transition: 0.3s; }
+        .btn-free { background-color: #0066ff; color: white; border: none; }
+        .btn-free:hover { background-color: #0052cc; box-shadow: 0 5px 15px rgba(0,102,255,0.3); }
+        .btn-pro { background-color: transparent; color: #0066ff; border: 2px solid #0066ff; }
+        .btn-pro:hover { background-color: #0066ff; color: white; }
+
+        /* Features Table (σαν το CCleaner) */
+        .comparison { padding: 60px 10%; max-width: 900px; margin: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 40px; }
+        th, td { padding: 20px; text-align: left; border-bottom: 1px solid #eee; }
+        .check { color: #28a745; font-weight: bold; }
+        .cross { color: #dc3545; font-weight: bold; }
+        
+        footer { padding: 40px; text-align: center; color: #999; font-size: 14px; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>FlashSweep ⚡</h1>
-        <p>Ο πιο γρήγορος τρόπος να καθαρίσεις το PC σου και να το κλείσεις αυτόματα.</p>
+    <header>
+        <div class="logo">FlashSweep⚡</div>
+    </header>
+
+    <section class="hero">
+        <h1>Καθαρό PC σε δευτερόλεπτα.</h1>
+        <p>Το FlashSweep αφαιρεί άχρηστα αρχεία και κλείνει αυτόματα τον υπολογιστή σας για μέγιστη απόδοση την επόμενη μέρα.</p>
         
-        <ul class="features">
-            <li>✅ Καθαρισμός Temp & Junk Files</li>
-            <li>✅ Αυτόματο Shutdown σε 15"</li>
-            <li>✅ Χωρίς διαφημίσεις (Free Edition)</li>
-            <li>✅ Advanced System Repair (Pro Edition)</li>
-        </ul>
+        <div class="cta-container">
+            <a href="FlashSweepFree.exe" class="btn btn-free">Δωρεάν Λήψη</a>
+            <a href="YOUR_STRIPE_LINK" class="btn btn-pro">Αγορά FlashSweep Pro</a>
+        </div>
+    </section>
 
-        <br>
+    <section class="comparison">
+        <h2 style="text-align:center;">Σύγκριση Εκδόσεων</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Χαρακτηριστικά</th>
+                    <th>Free</th>
+                    <th>Pro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Καθαρισμός Temp Files</td>
+                    <td class="check">✔</td>
+                    <td class="check">✔</td>
+                </tr>
+                <tr>
+                    <td>Αυτόματο Shutdown</td>
+                    <td class="check">✔</td>
+                    <td class="check">✔</td>
+                </tr>
+                <tr>
+                    <td>Επισκευή Αρχείων Συστήματος (SFC)</td>
+                    <td class="cross">✘</td>
+                    <td class="check">✔</td>
+                </tr>
+                <tr>
+                    <td>Έλεγχος Υγείας Δίσκου</td>
+                    <td class="cross">✘</td>
+                    <td class="check">✔</td>
+                </tr>
+                <tr>
+                    <td>Προτεραιότητα στην Υποστήριξη</td>
+                    <td class="cross">✘</td>
+                    <td class="check">✔</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-        <!-- Εδώ θα βάλεις το link για το EXE σου -->
-        <a href="FlashSweepFree.exe" class="btn btn-download">DOWNLOAD FREE</a>
-        
-        <!-- Εδώ θα βάλεις το link από το Stripe ή το PayPal για τη συνδρομή -->
-        <a href="YOUR_PAYMENT_LINK_HERE" class="btn btn-pro">GET PRO - 5€/month</a>
-    </div>
-
-    <p style="margin-top: 50px; font-size: 0.8em; color: #555;">© 2024 FlashSweep Software. All rights reserved.</p>
+    <footer>
+        &copy; 2024 FlashSweep Software. Σχεδιασμένο για Windows.
+    </footer>
 
 </body>
 </html>
+
