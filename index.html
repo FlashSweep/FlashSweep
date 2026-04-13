@@ -3,97 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlashSweep | Clean & Optimize your PC</title>
+    <title>FlashSweep | Fast & Minimalist PC Optimizer</title>
     <style>
-        /* Minimalist Style */
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #ffffff; color: #333; margin: 0; padding: 0; }
+        /* Minimalist & Professional Theme */
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #ffffff; 
+            color: #333; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6;
+        }
         
-        /* Header */
-        header { padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
-        .logo { font-size: 24px; font-weight: bold; color: #0066ff; }
-        
+        /* Navigation / Header */
+        header { 
+            padding: 15px 10%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid #f0f0f0;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { width: 45px; height: 45px; border-radius: 8px; }
+        .logo-text { font-size: 22px; font-weight: 700; color: #0052cc; letter-spacing: -0.5px; }
+
         /* Hero Section */
-        .hero { padding: 80px 10%; text-align: center; background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%); }
-        h1 { font-size: 48px; color: #111; margin-bottom: 20px; }
-        p { font-size: 20px; color: #666; max-width: 600px; margin: 0 auto 30px; }
+        .hero { 
+            padding: 100px 10% 60px; 
+            text-align: center; 
+            background: radial-gradient(circle at center, #fdfdfd 0%, #f4f7fa 100%);
+        }
+        h1 { font-size: 52px; color: #1a1a1a; margin-bottom: 20px; font-weight: 800; }
+        p.subtitle { font-size: 22px; color: #666; max-width: 700px; margin: 0 auto 40px; }
 
         /* Buttons */
-        .cta-container { display: flex; justify-content: center; gap: 20px; }
-        .btn { padding: 15px 35px; font-size: 18px; font-weight: 600; text-decoration: none; border-radius: 50px; transition: 0.3s; }
-        .btn-free { background-color: #0066ff; color: white; border: none; }
-        .btn-free:hover { background-color: #0052cc; box-shadow: 0 5px 15px rgba(0,102,255,0.3); }
-        .btn-pro { background-color: transparent; color: #0066ff; border: 2px solid #0066ff; }
-        .btn-pro:hover { background-color: #0066ff; color: white; }
+        .cta-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn { 
+            padding: 16px 40px; 
+            font-size: 18px; 
+            font-weight: 600; 
+            text-decoration: none; 
+            border-radius: 12px; 
+            transition: all 0.3s ease; 
+        }
+        .btn-free { background-color: #0052cc; color: white; border: none; box-shadow: 0 4px 14px rgba(0,82,204,0.3); }
+        .btn-free:hover { background-color: #0041a3; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,82,204,0.4); }
+        .btn-pro { background-color: #ffffff; color: #0052cc; border: 2px solid #0052cc; }
+        .btn-pro:hover { background-color: #f0f7ff; transform: translateY(-2px); }
 
-        /* Features Table (σαν το CCleaner) */
-        .comparison { padding: 60px 10%; max-width: 900px; margin: auto; }
-        table { width: 100%; border-collapse: collapse; margin-top: 40px; }
-        th, td { padding: 20px; text-align: left; border-bottom: 1px solid #eee; }
-        .check { color: #28a745; font-weight: bold; }
-        .cross { color: #dc3545; font-weight: bold; }
-        
-        footer { padding: 40px; text-align: center; color: #999; font-size: 14px; }
+        /* Trust Badges */
+        .trust-badges { margin-top: 30px; font-size: 14px; color: #888; display: flex; justify-content: center; gap: 20px; }
+        .badge { display: flex; align-items: center; gap: 5px; }
+
+        /* Comparison Table */
+        .comparison-section { padding: 80px 10%; max-width: 1000px; margin: auto; }
+        .comparison-section h2 { text-align: center; font-size: 32px; margin-bottom: 40px; }
+        table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        th, td { padding: 22px; text-align: left; border-bottom: 1px solid #f0f0f0; }
+        th { background-color: #f8f9fa; font-weight: 700; color: #444; }
+        .check { color: #28a745; font-size: 20px; font-weight: bold; }
+        .cross { color: #ebecf0; font-size: 20px; }
+        .pro-highlight { background-color: #f0f7ff; font-weight: 600; color: #0052cc; }
+
+        footer { padding: 60px; text-align: center; color: #aaa; font-size: 14px; background: #fafafa; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">FlashSweep⚡</div>
+        <div class="logo-container">
+            <!-- Σιγουρέψου ότι έχεις ανεβάσει το εικονίδιο ως icon.png στο ίδιο repository -->
+            <img src="icon.png" alt="FlashSweep Logo" class="logo-img">
+            <span class="logo-text">FlashSweep</span>
+        </div>
     </header>
 
     <section class="hero">
-        <h1>Καθαρό PC σε δευτερόλεπτα.</h1>
-        <p>Το FlashSweep αφαιρεί άχρηστα αρχεία και κλείνει αυτόματα τον υπολογιστή σας για μέγιστη απόδοση την επόμενη μέρα.</p>
+        <h1>Καθαρό PC. Μηδέν Κόπος.</h1>
+        <p class="subtitle">Αφαιρέστε τα ψηφιακά σκουπίδια και βελτιώστε την υγεία των Windows με ένα κλικ, λίγο πριν το αυτόματο κλείσιμο.</p>
         
-        <div class="cta-container">
-            <a href="FlashSweepFree.exe" class="btn btn-free">Δωρεάν Λήψη</a>
-            <a href="YOUR_STRIPE_LINK" class="btn btn-pro">Αγορά FlashSweep Pro</a>
+        <div class="cta-group">
+            <a href="FlashSweepFree.exe" class="btn btn-free">Download Free Version</a>
+            <a href="YOUR_PAYMENT_LINK" class="btn btn-pro">Upgrade to Pro Edition</a>
+        </div>
+
+        <div class="trust-badges">
+            <div class="badge"> No Viruses</div>
+            <div class="badge"> Windows 10/11</div>
+            <div class="badge"> Ultra Fast</div>
         </div>
     </section>
 
-    <section class="comparison">
-        <h2 style="text-align:center;">Σύγκριση Εκδόσεων</h2>
+    <section class="comparison-section">
+        <h2>Γιατί να επιλέξετε την Pro έκδοση;</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Χαρακτηριστικά</th>
-                    <th>Free</th>
-                    <th>Pro</th>
+                    <th>Δυνατότητες</th>
+                    <th>Free Edition</th>
+                    <th class="pro-highlight">Pro Edition</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Καθαρισμός Temp Files</td>
+                    <td>Καθαρισμός Temp & Junk Files</td>
                     <td class="check">✔</td>
-                    <td class="check">✔</td>
+                    <td class="pro-highlight check">✔</td>
                 </tr>
                 <tr>
-                    <td>Αυτόματο Shutdown</td>
+                    <td>Αυτόματο Shutdown (Επιλέξιμο)</td>
                     <td class="check">✔</td>
-                    <td class="check">✔</td>
+                    <td class="pro-highlight check">✔</td>
                 </tr>
                 <tr>
-                    <td>Επισκευή Αρχείων Συστήματος (SFC)</td>
+                    <td>Επιδιόρθωση Windows (SFC & DISM)</td>
                     <td class="cross">✘</td>
-                    <td class="check">✔</td>
+                    <td class="pro-highlight check">✔</td>
                 </tr>
                 <tr>
-                    <td>Έλεγχος Υγείας Δίσκου</td>
+                    <td>Εκκαθάριση Windows Update Cache</td>
                     <td class="cross">✘</td>
-                    <td class="check">✔</td>
+                    <td class="pro-highlight check">✔</td>
                 </tr>
                 <tr>
-                    <td>Προτεραιότητα στην Υποστήριξη</td>
+                    <td>Έλεγχος Υγείας Σκληρού Δίσκου</td>
                     <td class="cross">✘</td>
-                    <td class="check">✔</td>
+                    <td class="pro-highlight check">✔</td>
+                </tr>
+                <tr>
+                    <td>Προτεραιότητα σε Νέα Updates</td>
+                    <td class="cross">✘</td>
+                    <td class="pro-highlight check">✔</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
     <footer>
-        &copy; 2024 FlashSweep Software. Σχεδιασμένο για Windows.
+        <p>&copy; 2026 FlashSweep Software Global. Όλα τα δικαιώματα διατηρούνται.</p>
+        <p style="font-size: 12px; margin-top: 10px;">Σημείωση: Το FlashSweep είναι ένα εργαλείο βελτιστοποίησης βασισμένο σε Batch. Χρησιμοποιήστε το με υπευθυνότητα.</p>
     </footer>
 
 </body>
 </html>
+
