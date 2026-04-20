@@ -1,82 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>FlashSweep - Free Up Space</title>
-    <meta property="og:title" content="FlashSweep - Free Up Space" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
+<head>
+  <meta charset="UTF-8">
+  <title>FlashSweep - Clean Your PC Instantly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./style.css" />
-    <link href="./index.css" rel="stylesheet" />
-  </head>
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="icon.png">
 
-  <body>
-    <div>
-      <div class="home-container1">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        <!-- NAVIGATION -->
-        <div class="navigation-container1">
-          <nav class="navigation-wrapper">
-            <div class="navigation-container">
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+      background: #0b0b0c;
+      color: white;
+    }
 
-              <!-- LOGO -->
-              <a href="index.html">
-                <div class="navigation-brand">
-                  <div class="navigation-logo-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        d="M4 14l8-10-2 6h8l-8 10 2-6z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span class="navigation-brand-text section-title">
-                    FlashSweep
-                  </span>
-                </div>
-              </a>
+    /* NAVBAR */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
 
-              <!-- CLEANED MENU -->
-              <div class="navigation-desktop-menu">
-                <div class="navigation-actions">
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
 
-                  <!-- ONLY BUTTON LEFT -->
-                  <a href="https://google.com">
-                    <div class="btn btn-sm btn-primary">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        >
-                          <path d="M12 15V3"></path>
-                          <path d="M7 10l5 5l5-5"></path>
-                        </g>
-                      </svg>
-                      <span>Free Download</span>
-                    </div>
-                  </a>
+    .logo img {
+      width: 28px;
+      height: 28px;
+    }
 
-                </div>
-              </div>
+    .btn {
+      background: #0071e3;
+      padding: 10px 18px;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      transition: 0.2s;
+    }
 
-            </div>
-          </nav>
-        </div>
+    .btn:hover {
+      background: #005bb5;
+    }
 
-        <!-- YOUR OTHER CONTENT CONTINUES BELOW (UNCHANGED) -->
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+    }
 
-      </div>
+    .hero img {
+      width: 60px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      opacity: 0.7;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn {
+      font-size: 18px;
+      padding: 14px 28px;
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 80px 50px;
+    }
+
+    .feature {
+      background: #111;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      opacity: 0.7;
+    }
+
+    /* SECTION */
+    .section {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .section h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      opacity: 0.7;
+      margin-bottom: 25px;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 40px;
+      opacity: 0.5;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="logo">
+      <img src="icon.png" alt="FlashSweep Logo">
+      <span>FlashSweep</span>
     </div>
-  </body>
+
+    <a href="https://google.com" class="btn">Download</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="icon.png" alt="FlashSweep Logo">
+
+    <h1>Free Up Space Instantly</h1>
+    <p>Clean junk files. Boost performance. Stay fast.</p>
+
+    <a href="https://google.com" class="btn">Download Now</a>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features">
+    <div class="feature">
+      <h3>⚡ Fast Cleaning</h3>
+      <p>Remove junk files in seconds with smart scanning.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🔒 Safe & Secure</h3>
+      <p>Your important files are always protected.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🚀 Boost Speed</h3>
+      <p>Make your PC feel like new again.</p>
+    </div>
+  </div>
+
+  <!-- SECTION -->
+  <div class="section">
+    <h2>Trusted by Thousands</h2>
+    <p>Over 50,000 users already cleaned their devices.</p>
+    <a href="https://google.com" class="btn">Get Started</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 FlashSweep. All rights reserved.
+  </div>
+
+</body>
 </html>
