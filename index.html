@@ -1,113 +1,67 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>FlashSweep - Free Up Space</title>
+    <meta property="og:title" content="FlashSweep - Free Up Space" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html { line-height: 1.15;} body { margin: 0;} * { box-sizing: border-box; border-width: 0; border-style: solid; }
-      p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 { margin: 0; padding: 0;}
-      button { background-color: transparent; cursor: pointer;}
-      a { color: inherit; text-decoration: inherit;}
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
     </style>
-    <style>
-      :root {
-        --color-primary: #007bff;
-        --color-on-surface: #333;
-        --color-surface: #ffffff;
-      }
-      body {
-        font-family: 'Roboto', sans-serif;
-        color: var(--color-on-surface);
-        background: var(--color-surface);
-      }
-      .navigation-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
-      .navigation-brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: bold;
-        font-size: 1.5rem;
-      }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        font-weight: 500;
-        transition: 0.3s;
-        text-decoration: none;
-      }
-      .btn-primary {
-        background-color: var(--color-primary);
-        color: white;
-      }
-      .btn-primary:hover {
-        background-color: #0056b3;
-      }
-      .hero-section {
-        padding: 5rem 2rem;
-        text-align: center;
-        background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
-      }
-      .hero-title { font-size: 3rem; margin-bottom: 1rem; }
+    <style data-tag="default-style-sheet">
+      html { font-family: Roboto; font-size: 1rem; }
+      body { font-weight: 400; font-style:normal; letter-spacing: 0.02em; line-height: 1.6; color: var(--color-on-surface); background: var(--color-surface); }
     </style>
+    <link rel="stylesheet" href="https://googleapis.com" />
+    <link rel="stylesheet" href="https://googleapis.com" />
   </head>
   <body>
+    <link rel="stylesheet" href="./style.css" />
     <div>
-      <!-- Navigation -->
-      <nav class="navigation-container">
-        <div class="navigation-brand">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
-          </svg>
-          <span>FlashSweep</span>
-        </div>
-        
-        <div class="navigation-actions">
-          <!-- Download Button -->
-          <a href="FlashSweep-Setup.exe" download class="btn btn-primary download-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <path d="m7 10l5 5l5-5"></path>
-              </g>
-            </svg>
-            <span>Free Download</span>
-          </a>
-        </div>
-      </nav>
+      <link href="./index.css" rel="stylesheet" />
 
-      <!-- Content -->
-      <section class="hero-section">
-        <h1 class="hero-title">Clean Your PC in a Flash</h1>
-        <p>Remove junk files, speed up your system, and reclaim your disk space.</p>
-        <br>
-        <a href="FlashSweep-Setup.exe" download class="btn btn-primary download-link" style="padding: 1rem 2rem; font-size: 1.2rem;">
-            Get Started Now
-        </a>
-      </section>
+      <div class="home-container1">
+        <navigation-wrapper class="navigation-wrapper">
+          <div class="navigation-container1">
+            <nav class="navigation-wrapper">
+              <div class="navigation-container">
+                <a href="index.html">
+                  <div aria-label="FlashSweep Home" class="navigation-brand">
+                    <div class="navigation-logo-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                      </svg>
+                    </div>
+                    <span class="navigation-brand-text section-title">FlashSweep</span>
+                  </div>
+                </a>
+
+                <div class="navigation-desktop-menu">
+                  <!-- Navigation Links Removed -->
+                  <div class="navigation-actions">
+                    <!-- Sign In Removed -->
+                    <!-- Fixed Download Button -->
+                    <a href="FlashSweep-Setup.exe" download="FlashSweep-Setup.exe">
+                      <div class="btn btn-sm btn-primary" style="cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <path d="m7 10l5 5l5-5"></path>
+                          </g>
+                        </svg>
+                        <span>Free Download</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </navigation-wrapper>
+      </div>
     </div>
-
-    <script>
-      // Simple logic to handle button clicks if needed
-      const downloadButtons = document.querySelectorAll('.download-link');
-      
-      downloadButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-          console.log("Download started...");
-          // The 'download' attribute in the HTML handles the actual file saving
-        });
-      });
-    </script>
   </body>
 </html>
