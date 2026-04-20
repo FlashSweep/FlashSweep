@@ -5,10 +5,22 @@
   <title>FlashSweep - Clean Your PC Instantly</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="icon.png">
 
   <style>
+    :root {
+      --bg: #0b0b0c;
+      --text: #ffffff;
+      --card: #111;
+      --primary: #0071e3;
+    }
+
+    body.light {
+      --bg: #ffffff;
+      --text: #111;
+      --card: #f3f3f3;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -17,11 +29,12 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-      background: #0b0b0c;
-      color: white;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
     }
 
-    /* NAVBAR */
+    /* NAV */
     .nav {
       display: flex;
       justify-content: space-between;
@@ -33,26 +46,28 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 20px;
       font-weight: 600;
     }
 
     .logo img {
       width: 28px;
-      height: 28px;
     }
 
     .btn {
-      background: #0071e3;
-      padding: 10px 18px;
-      border-radius: 8px;
+      background: var(--primary);
+      padding: 12px 24px;
+      border-radius: 999px;
       color: white;
       text-decoration: none;
-      transition: 0.2s;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .btn:hover {
-      background: #005bb5;
+      transform: scale(1.05);
+      opacity: 0.9;
     }
 
     /* HERO */
@@ -62,25 +77,19 @@
     }
 
     .hero img {
-      width: 60px;
+      width: 70px;
       margin-bottom: 20px;
     }
 
     .hero h1 {
       font-size: 56px;
-      font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 20px;
       opacity: 0.7;
-      margin-bottom: 30px;
-    }
-
-    .hero .btn {
-      font-size: 18px;
-      padding: 14px 28px;
+      margin-bottom: 25px;
+      font-size: 20px;
     }
 
     /* FEATURES */
@@ -92,42 +101,62 @@
     }
 
     .feature {
-      background: #111;
+      background: var(--card);
       padding: 30px;
-      border-radius: 16px;
+      border-radius: 20px;
       text-align: center;
     }
 
-    .feature h3 {
-      margin-bottom: 10px;
+    /* INFO SECTION */
+    .info {
+      text-align: center;
+      padding: 80px 20px;
     }
 
-    .feature p {
-      opacity: 0.7;
+    .box {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 20px;
+      display: inline-block;
+      text-align: left;
     }
 
-    /* SECTION */
-    .section {
+    .box p {
+      margin: 6px 0;
+      opacity: 0.8;
+    }
+
+    /* HOW IT WORKS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 80px 50px;
+      text-align: center;
+    }
+
+    .step {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 18px;
+    }
+
+    /* CTA */
+    .cta {
       text-align: center;
       padding: 100px 20px;
     }
 
-    .section h2 {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    .section p {
-      opacity: 0.7;
-      margin-bottom: 25px;
-    }
-
-    /* FOOTER */
     .footer {
       text-align: center;
       padding: 40px;
       opacity: 0.5;
       font-size: 14px;
+    }
+
+    .toggle {
+      cursor: pointer;
+      opacity: 0.7;
     }
   </style>
 </head>
@@ -137,52 +166,100 @@
   <!-- NAV -->
   <div class="nav">
     <div class="logo">
-      <img src="icon.png" alt="FlashSweep Logo">
+      <img src="icon.png">
       <span>FlashSweep</span>
     </div>
 
-    <a href="https://google.com" class="btn">Download</a>
+    <div style="display:flex; gap:15px; align-items:center;">
+      <div class="toggle" onclick="toggleTheme()">Theme</div>
+
+      <a href="https://google.com" class="btn">
+        Download for Free
+      </a>
+
+      <!-- PYTHON BUTTON -->
+      <a href="https://www.python.org" class="btn" style="background:#333;">
+        🐍 Download Python
+      </a>
+    </div>
   </div>
 
   <!-- HERO -->
   <div class="hero">
-    <img src="icon.png" alt="FlashSweep Logo">
-
+    <img src="icon.png">
     <h1>Free Up Space Instantly</h1>
-    <p>Clean junk files. Boost performance. Stay fast.</p>
+    <p>Lightweight cleaner under 1MB. Built with Python. Simple. Fast.</p>
 
-    <a href="https://google.com" class="btn">Download Now</a>
+    <a href="https://google.com" class="btn">Download for Free</a>
   </div>
 
   <!-- FEATURES -->
   <div class="features">
     <div class="feature">
-      <h3>⚡ Fast Cleaning</h3>
-      <p>Remove junk files in seconds with smart scanning.</p>
+      <h3>⚡ Ultra Lightweight</h3>
+      <p>Less than 1MB install size.</p>
     </div>
 
     <div class="feature">
-      <h3>🔒 Safe & Secure</h3>
-      <p>Your important files are always protected.</p>
+      <h3>🧹 Temp Cleaner</h3>
+      <p>Removes junk & temp files safely.</p>
     </div>
 
     <div class="feature">
-      <h3>🚀 Boost Speed</h3>
-      <p>Make your PC feel like new again.</p>
+      <h3>🐍 Python Powered</h3>
+      <p>Built using Python for flexibility.</p>
     </div>
   </div>
 
-  <!-- SECTION -->
-  <div class="section">
-    <h2>Trusted by Thousands</h2>
-    <p>Over 50,000 users already cleaned their devices.</p>
-    <a href="https://google.com" class="btn">Get Started</a>
+  <!-- INFO -->
+  <div class="info">
+    <h2>Product Details</h2>
+    <br>
+    <div class="box">
+      <p><strong>Version:</strong> v0.1</p>
+      <p><strong>Developer:</strong> Moraitis</p>
+      <p><strong>Engine:</strong> Python</p>
+      <p><strong>Size:</strong> Under 1MB</p>
+      <p><strong>Function:</strong> Cleans temporary files</p>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="steps">
+    <div class="step">
+      <h3>1. Scan</h3>
+      <p>Find junk files automatically</p>
+    </div>
+
+    <div class="step">
+      <h3>2. Analyze</h3>
+      <p>Safe files are identified</p>
+    </div>
+
+    <div class="step">
+      <h3>3. Clean</h3>
+      <p>Remove junk instantly</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>Ready to Clean Your PC?</h2>
+    <p>Download FlashSweep and improve performance instantly.</p>
+    <br>
+    <a href="https://google.com" class="btn">Download for Free</a>
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
-    © 2026 FlashSweep. All rights reserved.
+    © 2026 FlashSweep • Made by Moraitis
   </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("light");
+    }
+  </script>
 
 </body>
 </html>
